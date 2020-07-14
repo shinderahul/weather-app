@@ -5,9 +5,99 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background: url(https://www.cambridge.org/elt/blog/wp-content/uploads/2019/02/background-3268840_1920.jpg);
+	background-size: cover;
 }
 
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
+}
+
+.forecast-container {
+	background: #323544;
+	border-radius: 10px;
+	color: #bfc1c8;
+	margin: 0 auto;
+	max-width: 750px;
+	overflow: hidden;
+	width: 90%;
+}
+
+.forecast.today {
+	display: block;
+	width: 100%;
+}
+
+.forecast .forecast-header {
+	background: rgba(0, 0, 0, 0.1);
+	padding: 10px;
+	text-align: center;
+	font-weight: 400;
+}
+
+.forecast.today .forecast-content {
+	text-align: left;
+	padding: 30px;
+}
+
+.forecast.today .location {
+	font-size: 24px;
+	font-size: 1.5em;
+	font-weight: 400;
+}
+
+.forecast .forecast-content .degree {
+	font-size: 24px;
+	font-size: 1.7142857143em;
+	color: white;
+	font-weight: 700;
+}
+
+.forecast.today .degree .num {
+	font-size: 90px;
+	font-size: 6.4285714286rem;
+	margin-right: 30px;
+}
+
+.forecast.today .degree .forecast-icon {
+	display: inline-block;
+	vertical-align: middle;
+}
+.forecast.today span {
+	margin-right: 20px;
+}
+.forecast.today span img {
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.find-location {
+	position: relative;
+	margin: 50px auto 70px;
+	max-width: 750px;
+	width: 90%;
+}
+
+.find-location input[type='text'] {
+	width: 100%;
+	padding: 20px 50px 20px 20px;
+	background: #1e202b;
+	color: white;
+	box-sizing: border-box;
+	outline: none;
+	border: none;
+	border-radius: 30px;
+}
+.find-location input[type='submit'] {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	bottom: 5px;
+	padding: 0 40px;
+	border: none;
+	background: #009ad8;
+	padding: 10px 20px;
+	border-radius: 30px;
+	color: white;
 }
