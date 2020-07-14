@@ -1,11 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Search = () => {
+const Search = ({ getCity }) => {
+	const [text, setText] = useState('');
+	const onChange = (q) => {
+		setText(q);
+		getCity(q);
+	};
+
 	return (
 		<section>
 			<form className='find-location'>
-				<input type='text' placeholder='Find your location...' />
-				<input type='submit' value='Find' />
+				<input
+					type='text'
+					placeholder='Find your location...'
+					value={text}
+					onChange={(e) => {
+						onChange(e.target.value);
+					}}
+				/>
 			</form>
 		</section>
 	);

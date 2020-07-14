@@ -7,10 +7,11 @@ import './App.css';
 const App = () => {
 	const [items, setItems] = useState('');
 	const [isLoading, setIsLoading] = useState(true);
+	const [city, setCity] = useState('');
+
 	useEffect(() => {
 		const fetchWeather = async () => {
 			const weatherApi = 'd83d8e5f537a05cbcc93126832246182';
-			const city = 'Mumbai';
 			const weather = await axios.get(
 				`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherApi}`
 			);
@@ -20,11 +21,11 @@ const App = () => {
 		};
 
 		fetchWeather();
-	}, []);
+	}, [city]);
 
 	return (
 		<Fragment>
-			<Search />
+			<Search getCity={(c) => setCity(c)} />
 			<Weather isLoading={isLoading} items={items} />
 		</Fragment>
 	);
